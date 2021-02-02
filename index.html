@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Угадайка</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row game-card align-items-center">
+            <div class="col col-md-5 offset-md-3">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <p class="m-0 card-title promo-title">Игра &laquo;Угадайка&raquo;</p>
+                        <p class="m-0 card-title setting-title unseen">Диапозон значений</p>
+                        <p class="m-0 card-title intro-title unseen">Условие игры</p>
+                        <p class="m-0 card-title play-title unseen">Вопрос №<span id="orderNumberField"></span></p>
+                    </div>
+                    <img class="img-fluid promo-img" src="images/promo.png" alt="promo-img">
+                    <div class="card-body setting-card unseen" id="example">
+                        <div class="row no-gutters">
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label for="minValueSetting">От:</label>
+                                    <input type="text" class="form-control" id="minValueSetting" placeholder="0">
+                                </div>                                
+                            </div>
+                            <div class="col-5 offset-2">
+                                <div class="form-group">
+                                    <label for="maxValueSetting">До:</label>
+                                    <input type="text" class="form-control" id="maxValueSetting" placeholder="100">
+                                </div>         
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body intro-card unseen">
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <p class="m-0"><span id="introField"></span></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card-body play-card unseen">
+                        <div class="row no-gutters">
+                            <div class="col answer">
+                                <p class="m-0"><span id="answerField"></span></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col btn-group">
+                                <button class="btn btn-primary" id="btnLess">Меньше<br>&#709;</button>
+                                <button class="btn btn-success btn-lg" id="btnEqual">Верно<br>&#x2714;</button>
+                                <button class="btn btn-primary" id="btnOver">Больше<br>&#708;</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn" id="btnStart">Начать игру</button>
+                        <button class="btn unseen" id="btnSetting">Продолжить</button>
+                        <button class="btn unseen" id="btnIntro">Готово</button>
+                        <button class="btn unseen" id="btnRetry">Новая игра</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

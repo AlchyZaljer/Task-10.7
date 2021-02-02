@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Assistant', sans-serif;
+    font-size: 5vh;
+    background-image: url(images/body-bg.jpg);
+    background-size: cover;
+    color: #ca7680;
+}
+
+.card {
+    background: none;
+    border-color: #d68d96;
+}
+
+.game-card {
+    height: 100vh;
+}
+
+.unseen {
+    display: none;
+}
+
+.card-header {
+    font-size: x-large;
+    border-color: #d68d96;
+    background-color: #d77e8442;
+}
+
+.promo-img {
+    height: 40vh;
+}
+
+.card-body {
+    height: 40vh;
+    background-color: #d77e840c;
+}
+
+.card-footer {
+    border-color: #d68d96;
+    background-color: #d77e8442;
+}
+
+.answer {
+    margin-top: -2vh;
+    height: 10vh;
+}
+
+#minValueSetting, #maxValueSetting {
+    border-color: #d68d96;
+    background-color: #d77e8442;
+    color: inherit;
+}
+
+.btn {
+    color: #d68d96;
+    text-transform: uppercase;
+}
+
+.btn-group {
+    margin-top: 7vh;
+}
+
+#btnLess, #btnOver, #btnEqual {
+    background: none;
+    border-color: #d68d96;
+    background-color: #d77e8442;
+    font-size: 3vh;
+}
