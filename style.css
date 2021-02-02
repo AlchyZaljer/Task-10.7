@@ -49,6 +49,12 @@ body {
     border-color: #d68d96;
     background-color: #d77e8442;
     color: inherit;
+    height: 7vh;
+}
+
+label {
+    float: left;
+    padding-left: 1vw;
 }
 
 .btn {
