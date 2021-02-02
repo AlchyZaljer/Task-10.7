@@ -38,6 +38,9 @@ document.querySelector('#btnSetting').addEventListener('click', (event) => {
         maxValue = a;
     }
 
+    console.log('min = ' + minValue);
+    console.log('max = ' + maxValue);
+
     minValue = ((minValue % 10 == -9) || (minValue % 10 == 1)) ? (minValue - 1) : minValue;
     maxValue = ((maxValue % 10 == 9) || (maxValue % 10 == -1)) ? (maxValue + 1) : maxValue;
     answerNumber = middle();
@@ -86,7 +89,10 @@ document.querySelector('#btnRetry').addEventListener('click', function () {
 
 document.querySelector('#btnLess').addEventListener('click', function () {
     if (gameRun) {
-        if (maxValue <= minValue) {
+        console.log('min1 = ' + minValue);
+        console.log('max1 = ' + maxValue);
+
+        if (maxValue == minValue) {
             wrongPhrase();
             gameRun = false;
         } else {
@@ -97,11 +103,17 @@ document.querySelector('#btnLess').addEventListener('click', function () {
             queryPhrase();
         }
     }
+
+    console.log('min2 = ' + minValue);
+    console.log('max2 = ' + maxValue);
 })
 
 document.querySelector('#btnOver').addEventListener('click', function () {
     if (gameRun) {
-        if (minValue >= maxValue) {
+        console.log('min1 = ' + minValue);
+        console.log('max1 = ' + maxValue);
+
+        if (minValue == (maxValue-1)) {
             wrongPhrase();
             gameRun = false;
         } else {
@@ -112,6 +124,9 @@ document.querySelector('#btnOver').addEventListener('click', function () {
             queryPhrase();
         }
     }
+
+    console.log('min2 = ' + minValue);
+    console.log('max2 = ' + maxValue);
 })
 
 document.querySelector('#btnEqual').addEventListener('click', function () {
@@ -186,7 +201,7 @@ function queryPhrase() {
             answerPhrase = `Да это легко! Число ${answerNumber }?`;
             break;
         case 3:
-            answerPhrase = `Может быть, Вы загадали ${answerNumber }?`;
+            answerPhrase = `Может быть, Вы загадали число ${answerNumber }?`;
             break;
         case 4:
             answerPhrase = `Наверне, это число ${answerNumber }?`;

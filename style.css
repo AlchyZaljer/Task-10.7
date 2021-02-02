@@ -32,7 +32,6 @@ body {
 }
 
 .card-body {
-    height: 40vh;
     background-color: #d77e840c;
 }
 
@@ -41,9 +40,9 @@ body {
     background-color: #d77e8442;
 }
 
-.answer {
-    margin-top: -2vh;
-    height: 10vh;
+#answerField {
+    font-size: 4vh;
+    vertical-align: middle;
 }
 
 #minValueSetting, #maxValueSetting {
@@ -58,7 +57,7 @@ body {
 }
 
 .btn-group {
-    margin-top: 7vh;
+    margin-top: 5vh;
 }
 
 #btnLess, #btnOver, #btnEqual {
