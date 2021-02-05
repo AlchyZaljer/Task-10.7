@@ -32,10 +32,7 @@ document.querySelector('#btnSetting').addEventListener('click', (event) => {
     }
 
     if (minValue > maxValue) {
-        let a = minValue;
-        let b = maxValue;
-        minValue = b;
-        maxValue = a;
+        [minValue, maxValue] = [maxValue, minValue];
     }
 
     console.log('min = ' + minValue);
@@ -43,6 +40,10 @@ document.querySelector('#btnSetting').addEventListener('click', (event) => {
 
     minValue = ((minValue % 10 == -9) || (minValue % 10 == 1)) ? (minValue - 1) : minValue;
     maxValue = ((maxValue % 10 == 9) || (maxValue % 10 == -1)) ? (maxValue + 1) : maxValue;
+
+    minValue = ((minValue % 100 == -99) || (minValue % 100 == 1)) ? (minValue - 1) : minValue;
+    maxValue = ((maxValue % 100 == 99) || (maxValue % 100 == -1)) ? (maxValue + 1) : maxValue;
+
     answerNumber = middle();
     gameRun = true;
 
