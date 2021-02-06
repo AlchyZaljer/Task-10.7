@@ -35,14 +35,8 @@ document.querySelector('#btnSetting').addEventListener('click', (event) => {
         [minValue, maxValue] = [maxValue, minValue];
     }
 
-    console.log('min = ' + minValue);
-    console.log('max = ' + maxValue);
-
-    minValue = ((minValue % 10 == -9) || (minValue % 10 == 1)) ? (minValue - 1) : minValue;
-    maxValue = ((maxValue % 10 == 9) || (maxValue % 10 == -1)) ? (maxValue + 1) : maxValue;
-
-    minValue = ((minValue % 100 == -99) || (minValue % 100 == 1)) ? (minValue - 1) : minValue;
-    maxValue = ((maxValue % 100 == 99) || (maxValue % 100 == -1)) ? (maxValue + 1) : maxValue;
+    minValue = ((minValue % 1000 == -999) || (minValue % 100 == 1)) ? (minValue - 1) : minValue;
+    maxValue = ((maxValue % 1000 == 999) || (maxValue % 100 == -1)) ? (maxValue + 1) : maxValue;
 
     answerNumber = middle();
     gameRun = true;
